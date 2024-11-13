@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AranaStorage", "AranaStorage.csproj", "{FC21CFB0-B2ED-4377-97A3-F563463FFBF4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC21CFB0-B2ED-4377-97A3-F563463FFBF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC21CFB0-B2ED-4377-97A3-F563463FFBF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC21CFB0-B2ED-4377-97A3-F563463FFBF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC21CFB0-B2ED-4377-97A3-F563463FFBF4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66F49FC3-12B0-4722-962D-84229C6F47D8}
+	EndGlobalSection
+EndGlobal
