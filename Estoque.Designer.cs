@@ -278,6 +278,7 @@
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "Nome", true));
             this.nomeTextBox.Location = new System.Drawing.Point(48, 80);
             this.nomeTextBox.Name = "nomeTextBox";
+            this.nomeTextBox.ReadOnly = true;
             this.nomeTextBox.Size = new System.Drawing.Size(323, 20);
             this.nomeTextBox.TabIndex = 133;
             // 
@@ -286,6 +287,7 @@
             this.marcaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "Marca", true));
             this.marcaTextBox.Location = new System.Drawing.Point(520, 80);
             this.marcaTextBox.Name = "marcaTextBox";
+            this.marcaTextBox.ReadOnly = true;
             this.marcaTextBox.Size = new System.Drawing.Size(119, 20);
             this.marcaTextBox.TabIndex = 135;
             // 
@@ -295,6 +297,7 @@
             this.especTextBox.Location = new System.Drawing.Point(48, 130);
             this.especTextBox.Multiline = true;
             this.especTextBox.Name = "especTextBox";
+            this.especTextBox.ReadOnly = true;
             this.especTextBox.Size = new System.Drawing.Size(466, 136);
             this.especTextBox.TabIndex = 137;
             // 
@@ -303,6 +306,7 @@
             this.precoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "Preco", true));
             this.precoTextBox.Location = new System.Drawing.Point(554, 128);
             this.precoTextBox.Name = "precoTextBox";
+            this.precoTextBox.ReadOnly = true;
             this.precoTextBox.Size = new System.Drawing.Size(100, 20);
             this.precoTextBox.TabIndex = 139;
             // 
@@ -311,6 +315,7 @@
             this.categoriaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "Categoria", true));
             this.categoriaTextBox.Location = new System.Drawing.Point(377, 80);
             this.categoriaTextBox.Name = "categoriaTextBox";
+            this.categoriaTextBox.ReadOnly = true;
             this.categoriaTextBox.Size = new System.Drawing.Size(137, 20);
             this.categoriaTextBox.TabIndex = 145;
             // 
@@ -319,6 +324,7 @@
             this.quantidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "Quantidade", true));
             this.quantidadeTextBox.Location = new System.Drawing.Point(645, 80);
             this.quantidadeTextBox.Name = "quantidadeTextBox";
+            this.quantidadeTextBox.ReadOnly = true;
             this.quantidadeTextBox.Size = new System.Drawing.Size(100, 20);
             this.quantidadeTextBox.TabIndex = 147;
             // 
