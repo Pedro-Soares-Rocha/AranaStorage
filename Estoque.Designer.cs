@@ -42,11 +42,11 @@
             this.produtosTableAdapter = new AranaStorage._arana_stockDataSetTableAdapters.ProdutosTableAdapter();
             this.tableAdapterManager = new AranaStorage._arana_stockDataSetTableAdapters.TableAdapterManager();
             this.produtosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
@@ -57,6 +57,13 @@
             this.precoTextBox = new System.Windows.Forms.TextBox();
             this.categoriaTextBox = new System.Windows.Forms.TextBox();
             this.quantidadeTextBox = new System.Windows.Forms.TextBox();
+            this.produtosDataGridView = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             label1 = new System.Windows.Forms.Label();
             nomeLabel1 = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
@@ -68,6 +75,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtosBindingNavigator)).BeginInit();
             this.produtosBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.produtosDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -205,6 +213,13 @@
             this.produtosBindingNavigator.TabIndex = 130;
             this.produtosBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -238,16 +253,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -270,7 +278,7 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // nomeTextBox
@@ -328,6 +336,78 @@
             this.quantidadeTextBox.Size = new System.Drawing.Size(100, 20);
             this.quantidadeTextBox.TabIndex = 147;
             // 
+            // produtosDataGridView
+            // 
+            this.produtosDataGridView.AllowUserToAddRows = false;
+            this.produtosDataGridView.AllowUserToDeleteRows = false;
+            this.produtosDataGridView.AllowUserToResizeColumns = false;
+            this.produtosDataGridView.AllowUserToResizeRows = false;
+            this.produtosDataGridView.AutoGenerateColumns = false;
+            this.produtosDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.produtosDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.produtosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.produtosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9});
+            this.produtosDataGridView.DataSource = this.produtosBindingSource;
+            this.produtosDataGridView.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.produtosDataGridView.Location = new System.Drawing.Point(0, 283);
+            this.produtosDataGridView.Name = "produtosDataGridView";
+            this.produtosDataGridView.ReadOnly = true;
+            this.produtosDataGridView.Size = new System.Drawing.Size(799, 291);
+            this.produtosDataGridView.TabIndex = 147;
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.FillWeight = 10F;
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Id.Width = 20;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nome";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Marca";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Marca";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Preco";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Preco";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Categoria";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Categoria";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Quantidade";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Quantidade";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
             // Estoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,7 +415,8 @@
             this.BackColor = System.Drawing.Color.DarkOrange;
             this.BackgroundImage = global::AranaStorage.Properties.Resources.AranaPc11;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(799, 535);
+            this.ClientSize = new System.Drawing.Size(799, 566);
+            this.Controls.Add(this.produtosDataGridView);
             this.Controls.Add(this.nomeTextBox);
             this.Controls.Add(this.marcaTextBox);
             this.Controls.Add(this.especTextBox);
@@ -359,6 +440,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.produtosBindingNavigator)).EndInit();
             this.produtosBindingNavigator.ResumeLayout(false);
             this.produtosBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.produtosDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -386,5 +468,12 @@
         private System.Windows.Forms.TextBox precoTextBox;
         private System.Windows.Forms.TextBox categoriaTextBox;
         private System.Windows.Forms.TextBox quantidadeTextBox;
+        private System.Windows.Forms.DataGridView produtosDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
     }
 }

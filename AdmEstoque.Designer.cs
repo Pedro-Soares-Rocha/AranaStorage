@@ -35,8 +35,8 @@
             System.Windows.Forms.Label nomeLabel;
             System.Windows.Forms.Label nomeLabel1;
             System.Windows.Forms.Label label6;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdmEstoque));
             System.Windows.Forms.Label label1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdmEstoque));
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this._arana_stockDataSet = new AranaStorage._arana_stockDataSet();
             this.produtosBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -65,6 +65,13 @@
             this.marcaTextBox = new System.Windows.Forms.TextBox();
             this.categoriaTextBox = new System.Windows.Forms.TextBox();
             this.quantidadeTextBox = new System.Windows.Forms.TextBox();
+            this.produtosDataGridView = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             marcaLabel = new System.Windows.Forms.Label();
             especLabel = new System.Windows.Forms.Label();
             precoLabel = new System.Windows.Forms.Label();
@@ -78,6 +85,7 @@
             this.produtosBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoqueBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.produtosDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // marcaLabel
@@ -151,6 +159,18 @@
             label6.Size = new System.Drawing.Size(104, 20);
             label6.TabIndex = 30;
             label6.Text = "Quantidade";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.ForeColor = System.Drawing.Color.White;
+            label1.Location = new System.Drawing.Point(521, 126);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(32, 20);
+            label1.TabIndex = 115;
+            label1.Text = "R$";
             // 
             // openFileDialog1
             // 
@@ -374,17 +394,77 @@
             this.quantidadeTextBox.Size = new System.Drawing.Size(100, 20);
             this.quantidadeTextBox.TabIndex = 114;
             // 
-            // label1
+            // produtosDataGridView
             // 
-            label1.AutoSize = true;
-            label1.BackColor = System.Drawing.Color.Transparent;
-            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.ForeColor = System.Drawing.Color.White;
-            label1.Location = new System.Drawing.Point(521, 126);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(32, 20);
-            label1.TabIndex = 115;
-            label1.Text = "R$";
+            this.produtosDataGridView.AllowUserToAddRows = false;
+            this.produtosDataGridView.AllowUserToDeleteRows = false;
+            this.produtosDataGridView.AllowUserToResizeColumns = false;
+            this.produtosDataGridView.AllowUserToResizeRows = false;
+            this.produtosDataGridView.AutoGenerateColumns = false;
+            this.produtosDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.produtosDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.produtosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.produtosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9});
+            this.produtosDataGridView.DataSource = this.produtosBindingSource;
+            this.produtosDataGridView.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.produtosDataGridView.Location = new System.Drawing.Point(0, 258);
+            this.produtosDataGridView.Name = "produtosDataGridView";
+            this.produtosDataGridView.ReadOnly = true;
+            this.produtosDataGridView.Size = new System.Drawing.Size(799, 291);
+            this.produtosDataGridView.TabIndex = 148;
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.FillWeight = 10F;
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Id.Width = 20;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nome";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Marca";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Marca";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Preco";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Preco";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Categoria";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Categoria";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Quantidade";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Quantidade";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // AdmEstoque
             // 
@@ -394,6 +474,7 @@
             this.BackgroundImage = global::AranaStorage.Properties.Resources.AranaPc11;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(799, 486);
+            this.Controls.Add(this.produtosDataGridView);
             this.Controls.Add(label1);
             this.Controls.Add(this.categoriaTextBox);
             this.Controls.Add(this.quantidadeTextBox);
@@ -420,6 +501,7 @@
             this.produtosBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoqueBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.produtosDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -454,5 +536,12 @@
         private System.Windows.Forms.TextBox marcaTextBox;
         private System.Windows.Forms.TextBox categoriaTextBox;
         private System.Windows.Forms.TextBox quantidadeTextBox;
+        private System.Windows.Forms.DataGridView produtosDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
     }
 }
