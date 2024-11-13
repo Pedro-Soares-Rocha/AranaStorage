@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.estoqueBtn = new System.Windows.Forms.Button();
-            this.pcProntoBtn = new System.Windows.Forms.Button();
-            this.pcMontagemBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.loginTxb = new System.Windows.Forms.TextBox();
             this.senhaTxb = new System.Windows.Forms.TextBox();
@@ -41,36 +39,14 @@
             // 
             // estoqueBtn
             // 
-            this.estoqueBtn.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.estoqueBtn.Location = new System.Drawing.Point(76, 184);
+            this.estoqueBtn.Font = new System.Drawing.Font("Corbel", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.estoqueBtn.Location = new System.Drawing.Point(245, 177);
             this.estoqueBtn.Name = "estoqueBtn";
-            this.estoqueBtn.Size = new System.Drawing.Size(99, 39);
+            this.estoqueBtn.Size = new System.Drawing.Size(176, 69);
             this.estoqueBtn.TabIndex = 0;
             this.estoqueBtn.Text = "Estoque";
             this.estoqueBtn.UseVisualStyleBackColor = true;
             this.estoqueBtn.Click += new System.EventHandler(this.estoqueBtn_Click);
-            // 
-            // pcProntoBtn
-            // 
-            this.pcProntoBtn.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pcProntoBtn.Location = new System.Drawing.Point(211, 184);
-            this.pcProntoBtn.Name = "pcProntoBtn";
-            this.pcProntoBtn.Size = new System.Drawing.Size(165, 39);
-            this.pcProntoBtn.TabIndex = 1;
-            this.pcProntoBtn.Text = "Maquinas Prontas";
-            this.pcProntoBtn.UseVisualStyleBackColor = true;
-            this.pcProntoBtn.Click += new System.EventHandler(this.pcProntoBtn_Click);
-            // 
-            // pcMontagemBtn
-            // 
-            this.pcMontagemBtn.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pcMontagemBtn.Location = new System.Drawing.Point(409, 184);
-            this.pcMontagemBtn.Name = "pcMontagemBtn";
-            this.pcMontagemBtn.Size = new System.Drawing.Size(165, 39);
-            this.pcMontagemBtn.TabIndex = 2;
-            this.pcMontagemBtn.Text = "Montar Maquina";
-            this.pcMontagemBtn.UseVisualStyleBackColor = true;
-            this.pcMontagemBtn.Click += new System.EventHandler(this.pcMontagemBtn_Click);
             // 
             // label1
             // 
@@ -149,8 +125,6 @@
             this.Controls.Add(this.senhaTxb);
             this.Controls.Add(this.loginTxb);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pcMontagemBtn);
-            this.Controls.Add(this.pcProntoBtn);
             this.Controls.Add(this.estoqueBtn);
             this.Name = "Home";
             this.Text = "Form1";
@@ -162,8 +136,6 @@
         #endregion
 
         private System.Windows.Forms.Button estoqueBtn;
-        private System.Windows.Forms.Button pcProntoBtn;
-        private System.Windows.Forms.Button pcMontagemBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox loginTxb;
         private System.Windows.Forms.TextBox senhaTxb;

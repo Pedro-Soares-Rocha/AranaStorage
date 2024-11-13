@@ -17,22 +17,7 @@ namespace AranaStorage
             InitializeComponent();
         }
 
-        private void btnFoto_Produto_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                openFileDialog1.Filter = "Fotos (*.jpg; *.png;) | *.jpg; *.png";
-                if (openFileDialog1.ShowDialog() == DialogResult.OK)
-                {
-                    imagensPictureBox.Image = new Bitmap(openFileDialog1.FileName);
-                }
-            }
-            catch (Exception)
-            { 
-                MessageBox.Show("Erro ao carregar o arquivo de imagem",
-                    "AranaTech", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+       
 
         private void produtosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -87,6 +72,16 @@ namespace AranaStorage
             this.produtosBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this._arana_stockDataSet);
 
+        }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Confirme exclusão do produto", "AranaStorage",
+                MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                
+                produtosTableAdapter.Update(_arana_stockDataSet.Produtos);
+            } 
         }
     }
 }

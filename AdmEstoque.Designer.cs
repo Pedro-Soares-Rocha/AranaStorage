@@ -32,13 +32,12 @@
             System.Windows.Forms.Label marcaLabel;
             System.Windows.Forms.Label especLabel;
             System.Windows.Forms.Label precoLabel;
-            System.Windows.Forms.Label imagensLabel;
             System.Windows.Forms.Label nomeLabel;
             System.Windows.Forms.Label nomeLabel1;
             System.Windows.Forms.Label label6;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdmEstoque));
+            System.Windows.Forms.Label label1;
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnFoto_Produto = new System.Windows.Forms.Button();
             this._arana_stockDataSet = new AranaStorage._arana_stockDataSet();
             this.produtosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.produtosTableAdapter = new AranaStorage._arana_stockDataSetTableAdapters.ProdutosTableAdapter();
@@ -59,26 +58,24 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.produtosBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
-            this.marcaTextBox = new System.Windows.Forms.TextBox();
             this.especTextBox = new System.Windows.Forms.TextBox();
             this.precoTextBox = new System.Windows.Forms.TextBox();
-            this.imagensPictureBox = new System.Windows.Forms.PictureBox();
             this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nomeListBox = new System.Windows.Forms.ListBox();
             this.estoqueBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.marcaTextBox = new System.Windows.Forms.TextBox();
+            this.categoriaTextBox = new System.Windows.Forms.TextBox();
             this.quantidadeTextBox = new System.Windows.Forms.TextBox();
             marcaLabel = new System.Windows.Forms.Label();
             especLabel = new System.Windows.Forms.Label();
             precoLabel = new System.Windows.Forms.Label();
-            imagensLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             nomeLabel1 = new System.Windows.Forms.Label();
             label6 = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this._arana_stockDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtosBindingNavigator)).BeginInit();
             this.produtosBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imagensPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoqueBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -89,7 +86,7 @@
             marcaLabel.BackColor = System.Drawing.Color.Transparent;
             marcaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             marcaLabel.ForeColor = System.Drawing.Color.White;
-            marcaLabel.Location = new System.Drawing.Point(522, 45);
+            marcaLabel.Location = new System.Drawing.Point(521, 53);
             marcaLabel.Name = "marcaLabel";
             marcaLabel.Size = new System.Drawing.Size(64, 22);
             marcaLabel.TabIndex = 72;
@@ -101,7 +98,7 @@
             especLabel.BackColor = System.Drawing.Color.Transparent;
             especLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             especLabel.ForeColor = System.Drawing.Color.White;
-            especLabel.Location = new System.Drawing.Point(50, 93);
+            especLabel.Location = new System.Drawing.Point(49, 101);
             especLabel.Name = "especLabel";
             especLabel.Size = new System.Drawing.Size(144, 22);
             especLabel.TabIndex = 74;
@@ -113,23 +110,11 @@
             precoLabel.BackColor = System.Drawing.Color.Transparent;
             precoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             precoLabel.ForeColor = System.Drawing.Color.White;
-            precoLabel.Location = new System.Drawing.Point(679, 93);
+            precoLabel.Location = new System.Drawing.Point(521, 103);
             precoLabel.Name = "precoLabel";
-            precoLabel.Size = new System.Drawing.Size(64, 20);
+            precoLabel.Size = new System.Drawing.Size(58, 20);
             precoLabel.TabIndex = 76;
-            precoLabel.Text = "Preco:";
-            // 
-            // imagensLabel
-            // 
-            imagensLabel.AutoSize = true;
-            imagensLabel.BackColor = System.Drawing.Color.Transparent;
-            imagensLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
-            imagensLabel.ForeColor = System.Drawing.Color.White;
-            imagensLabel.Location = new System.Drawing.Point(522, 93);
-            imagensLabel.Name = "imagensLabel";
-            imagensLabel.Size = new System.Drawing.Size(78, 22);
-            imagensLabel.TabIndex = 80;
-            imagensLabel.Text = "Imagem";
+            precoLabel.Text = "Preço";
             // 
             // nomeLabel
             // 
@@ -137,7 +122,7 @@
             nomeLabel.BackColor = System.Drawing.Color.Transparent;
             nomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             nomeLabel.ForeColor = System.Drawing.Color.White;
-            nomeLabel.Location = new System.Drawing.Point(50, 45);
+            nomeLabel.Location = new System.Drawing.Point(49, 53);
             nomeLabel.Name = "nomeLabel";
             nomeLabel.Size = new System.Drawing.Size(61, 22);
             nomeLabel.TabIndex = 70;
@@ -149,7 +134,7 @@
             nomeLabel1.BackColor = System.Drawing.Color.Transparent;
             nomeLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             nomeLabel1.ForeColor = System.Drawing.Color.White;
-            nomeLabel1.Location = new System.Drawing.Point(379, 45);
+            nomeLabel1.Location = new System.Drawing.Point(378, 53);
             nomeLabel1.Name = "nomeLabel1";
             nomeLabel1.Size = new System.Drawing.Size(97, 22);
             nomeLabel1.TabIndex = 83;
@@ -161,7 +146,7 @@
             label6.BackColor = System.Drawing.Color.Transparent;
             label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label6.ForeColor = System.Drawing.Color.White;
-            label6.Location = new System.Drawing.Point(679, 45);
+            label6.Location = new System.Drawing.Point(646, 55);
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(104, 20);
             label6.TabIndex = 30;
@@ -171,20 +156,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Title = "Escolha a foto do produto";
-            // 
-            // btnFoto_Produto
-            // 
-            this.btnFoto_Produto.BackColor = System.Drawing.Color.White;
-            this.btnFoto_Produto.BackgroundImage = global::AranaStorage.Properties.Resources.free_folder_icon_1449_thumb;
-            this.btnFoto_Produto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnFoto_Produto.Font = new System.Drawing.Font("Corbel", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFoto_Produto.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnFoto_Produto.Location = new System.Drawing.Point(683, 209);
-            this.btnFoto_Produto.Name = "btnFoto_Produto";
-            this.btnFoto_Produto.Size = new System.Drawing.Size(35, 35);
-            this.btnFoto_Produto.TabIndex = 35;
-            this.btnFoto_Produto.UseVisualStyleBackColor = false;
-            this.btnFoto_Produto.Click += new System.EventHandler(this.btnFoto_Produto_Click);
             // 
             // _arana_stockDataSet
             // 
@@ -244,7 +215,7 @@
             this.produtosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.produtosBindingNavigator.Name = "produtosBindingNavigator";
             this.produtosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.produtosBindingNavigator.Size = new System.Drawing.Size(803, 25);
+            this.produtosBindingNavigator.Size = new System.Drawing.Size(799, 25);
             this.produtosBindingNavigator.TabIndex = 84;
             this.produtosBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -272,6 +243,7 @@
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -346,23 +318,15 @@
             // nomeTextBox
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "Nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(54, 70);
+            this.nomeTextBox.Location = new System.Drawing.Point(53, 78);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(319, 20);
             this.nomeTextBox.TabIndex = 87;
             // 
-            // marcaTextBox
-            // 
-            this.marcaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "Marca", true));
-            this.marcaTextBox.Location = new System.Drawing.Point(526, 70);
-            this.marcaTextBox.Name = "marcaTextBox";
-            this.marcaTextBox.Size = new System.Drawing.Size(100, 20);
-            this.marcaTextBox.TabIndex = 89;
-            // 
             // especTextBox
             // 
             this.especTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "Espec", true));
-            this.especTextBox.Location = new System.Drawing.Point(54, 118);
+            this.especTextBox.Location = new System.Drawing.Point(53, 126);
             this.especTextBox.Multiline = true;
             this.especTextBox.Name = "especTextBox";
             this.especTextBox.Size = new System.Drawing.Size(445, 126);
@@ -371,48 +335,56 @@
             // precoTextBox
             // 
             this.precoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "Preco", true));
-            this.precoTextBox.Location = new System.Drawing.Point(683, 116);
+            this.precoTextBox.Location = new System.Drawing.Point(559, 126);
             this.precoTextBox.Name = "precoTextBox";
             this.precoTextBox.Size = new System.Drawing.Size(100, 20);
             this.precoTextBox.TabIndex = 93;
-            // 
-            // imagensPictureBox
-            // 
-            this.imagensPictureBox.BackColor = System.Drawing.SystemColors.Window;
-            this.imagensPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.produtosBindingSource, "imagens", true));
-            this.imagensPictureBox.Location = new System.Drawing.Point(526, 118);
-            this.imagensPictureBox.Name = "imagensPictureBox";
-            this.imagensPictureBox.Size = new System.Drawing.Size(151, 126);
-            this.imagensPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imagensPictureBox.TabIndex = 97;
-            this.imagensPictureBox.TabStop = false;
             // 
             // categoriasBindingSource
             // 
             this.categoriasBindingSource.DataMember = "Categorias";
             this.categoriasBindingSource.DataSource = this._arana_stockDataSet;
             // 
-            // nomeListBox
-            // 
-            this.nomeListBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.categoriasBindingSource, "Nome", true));
-            this.nomeListBox.FormattingEnabled = true;
-            this.nomeListBox.Location = new System.Drawing.Point(383, 70);
-            this.nomeListBox.Name = "nomeListBox";
-            this.nomeListBox.Size = new System.Drawing.Size(116, 17);
-            this.nomeListBox.TabIndex = 100;
-            // 
             // estoqueBindingSource
             // 
             this.estoqueBindingSource.DataMember = "fk_Estoque_Produtos";
             this.estoqueBindingSource.DataSource = this.produtosBindingSource;
             // 
+            // marcaTextBox
+            // 
+            this.marcaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "Marca", true));
+            this.marcaTextBox.Location = new System.Drawing.Point(525, 78);
+            this.marcaTextBox.Name = "marcaTextBox";
+            this.marcaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.marcaTextBox.TabIndex = 89;
+            // 
+            // categoriaTextBox
+            // 
+            this.categoriaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "Categoria", true));
+            this.categoriaTextBox.Location = new System.Drawing.Point(382, 78);
+            this.categoriaTextBox.Name = "categoriaTextBox";
+            this.categoriaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.categoriaTextBox.TabIndex = 112;
+            // 
             // quantidadeTextBox
             // 
-            this.quantidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.estoqueBindingSource, "Quantidade", true));
-            this.quantidadeTextBox.Location = new System.Drawing.Point(683, 67);
+            this.quantidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "Quantidade", true));
+            this.quantidadeTextBox.Location = new System.Drawing.Point(650, 78);
             this.quantidadeTextBox.Name = "quantidadeTextBox";
             this.quantidadeTextBox.Size = new System.Drawing.Size(100, 20);
-            this.quantidadeTextBox.TabIndex = 103;
+            this.quantidadeTextBox.TabIndex = 114;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.ForeColor = System.Drawing.Color.White;
+            label1.Location = new System.Drawing.Point(521, 126);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(32, 20);
+            label1.TabIndex = 115;
+            label1.Text = "R$";
             // 
             // AdmEstoque
             // 
@@ -421,22 +393,20 @@
             this.BackColor = System.Drawing.Color.DarkOrange;
             this.BackgroundImage = global::AranaStorage.Properties.Resources.AranaPc11;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(803, 486);
+            this.ClientSize = new System.Drawing.Size(799, 486);
+            this.Controls.Add(label1);
+            this.Controls.Add(this.categoriaTextBox);
             this.Controls.Add(this.quantidadeTextBox);
-            this.Controls.Add(this.nomeListBox);
             this.Controls.Add(this.nomeTextBox);
             this.Controls.Add(this.marcaTextBox);
             this.Controls.Add(this.especTextBox);
             this.Controls.Add(this.precoTextBox);
-            this.Controls.Add(this.imagensPictureBox);
             this.Controls.Add(this.produtosBindingNavigator);
             this.Controls.Add(nomeLabel1);
             this.Controls.Add(nomeLabel);
             this.Controls.Add(marcaLabel);
             this.Controls.Add(especLabel);
             this.Controls.Add(precoLabel);
-            this.Controls.Add(imagensLabel);
-            this.Controls.Add(this.btnFoto_Produto);
             this.Controls.Add(label6);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -448,7 +418,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.produtosBindingNavigator)).EndInit();
             this.produtosBindingNavigator.ResumeLayout(false);
             this.produtosBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imagensPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoqueBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -457,7 +426,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnFoto_Produto;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private _arana_stockDataSet _arana_stockDataSet;
         private System.Windows.Forms.BindingSource produtosBindingSource;
@@ -477,15 +445,14 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton produtosBindingNavigatorSaveItem;
         private System.Windows.Forms.TextBox nomeTextBox;
-        private System.Windows.Forms.TextBox marcaTextBox;
         private System.Windows.Forms.TextBox especTextBox;
         private System.Windows.Forms.TextBox precoTextBox;
-        private System.Windows.Forms.PictureBox imagensPictureBox;
         private _arana_stockDataSetTableAdapters.CategoriasTableAdapter categoriasTableAdapter;
         private System.Windows.Forms.BindingSource categoriasBindingSource;
-        private System.Windows.Forms.ListBox nomeListBox;
         private _arana_stockDataSetTableAdapters.EstoqueTableAdapter estoqueTableAdapter;
         private System.Windows.Forms.BindingSource estoqueBindingSource;
+        private System.Windows.Forms.TextBox marcaTextBox;
+        private System.Windows.Forms.TextBox categoriaTextBox;
         private System.Windows.Forms.TextBox quantidadeTextBox;
     }
 }

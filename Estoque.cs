@@ -16,5 +16,25 @@ namespace AranaStorage
         {
             InitializeComponent();
         }
+
+        private void produtosBindingNavigator_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
+
+        private void produtosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.produtosBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this._arana_stockDataSet);
+
+        }
+
+        private void Estoque_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela '_arana_stockDataSet.Produtos'. Você pode movê-la ou removê-la conforme necessário.
+            this.produtosTableAdapter.Fill(this._arana_stockDataSet.Produtos);
+
+        }
     }
 }
