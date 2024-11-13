@@ -39,10 +39,10 @@
             // 
             // estoqueBtn
             // 
-            this.estoqueBtn.Font = new System.Drawing.Font("Corbel", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.estoqueBtn.Location = new System.Drawing.Point(245, 177);
+            this.estoqueBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.estoqueBtn.Location = new System.Drawing.Point(270, 219);
             this.estoqueBtn.Name = "estoqueBtn";
-            this.estoqueBtn.Size = new System.Drawing.Size(176, 69);
+            this.estoqueBtn.Size = new System.Drawing.Size(142, 49);
             this.estoqueBtn.TabIndex = 0;
             this.estoqueBtn.Text = "Estoque";
             this.estoqueBtn.UseVisualStyleBackColor = true;
@@ -54,7 +54,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Minecraft", 50.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(106, 47);
+            this.label1.Location = new System.Drawing.Point(100, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(474, 67);
             this.label1.TabIndex = 3;
@@ -62,16 +62,16 @@
             // 
             // loginTxb
             // 
-            this.loginTxb.Location = new System.Drawing.Point(211, 294);
+            this.loginTxb.Location = new System.Drawing.Point(154, 294);
             this.loginTxb.Name = "loginTxb";
-            this.loginTxb.Size = new System.Drawing.Size(363, 20);
+            this.loginTxb.Size = new System.Drawing.Size(420, 20);
             this.loginTxb.TabIndex = 4;
             // 
             // senhaTxb
             // 
-            this.senhaTxb.Location = new System.Drawing.Point(211, 338);
+            this.senhaTxb.Location = new System.Drawing.Point(154, 338);
             this.senhaTxb.Name = "senhaTxb";
-            this.senhaTxb.Size = new System.Drawing.Size(363, 20);
+            this.senhaTxb.Size = new System.Drawing.Size(420, 20);
             this.senhaTxb.TabIndex = 5;
             this.senhaTxb.UseSystemPasswordChar = true;
             // 
@@ -102,7 +102,7 @@
             // 
             // estoqueAdmBtn
             // 
-            this.estoqueAdmBtn.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.estoqueAdmBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.estoqueAdmBtn.Location = new System.Drawing.Point(409, 368);
             this.estoqueAdmBtn.Name = "estoqueAdmBtn";
             this.estoqueAdmBtn.Size = new System.Drawing.Size(165, 31);

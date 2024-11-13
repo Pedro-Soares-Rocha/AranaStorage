@@ -83,5 +83,10 @@ namespace AranaStorage
                 produtosTableAdapter.Update(_arana_stockDataSet.Produtos);
             } 
         }
+
+        private void produtosBindingNavigator_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
     }
 }
