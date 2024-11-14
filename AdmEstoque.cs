@@ -55,6 +55,11 @@ namespace AranaStorage
             //this.componentes_PCTableAdapter.Fill(this._arana_stockDataSet.Componentes_PC);
             // TODO: This line of code loads data into the '_arana_stockDataSet.Produtos' table. You can move, or remove it, as needed.
             this.produtosTableAdapter.Fill(this._arana_stockDataSet.Produtos);
+            if (produtosDataGridView.Rows.Count > 0)
+            {
+                produtosDataGridView.FirstDisplayedScrollingRowIndex = produtosDataGridView.Rows.Count - 1;
+            }
+
 
         }
 
@@ -85,6 +90,11 @@ namespace AranaStorage
         }
 
         private void produtosBindingNavigator_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
 
         }

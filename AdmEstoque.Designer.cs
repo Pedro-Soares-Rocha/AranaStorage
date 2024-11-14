@@ -67,10 +67,11 @@
             this.quantidadeTextBox = new System.Windows.Forms.TextBox();
             this.produtosDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
             marcaLabel = new System.Windows.Forms.Label();
             especLabel = new System.Windows.Forms.Label();
             precoLabel = new System.Windows.Forms.Label();
@@ -85,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoqueBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtosDataGridView)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // marcaLabel
@@ -410,16 +412,17 @@
             this.produtosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.produtosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9});
             this.produtosDataGridView.DataSource = this.produtosBindingSource;
+            this.produtosDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.produtosDataGridView.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.produtosDataGridView.Location = new System.Drawing.Point(0, 258);
+            this.produtosDataGridView.Location = new System.Drawing.Point(0, 0);
             this.produtosDataGridView.Name = "produtosDataGridView";
             this.produtosDataGridView.ReadOnly = true;
-            this.produtosDataGridView.Size = new System.Drawing.Size(799, 291);
+            this.produtosDataGridView.Size = new System.Drawing.Size(803, 230);
             this.produtosDataGridView.TabIndex = 148;
             // 
             // dataGridViewTextBoxColumn2
@@ -430,6 +433,13 @@
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Categoria";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Categoria";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -445,19 +455,21 @@
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Categoria";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Categoria";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "Quantidade";
             this.dataGridViewTextBoxColumn9.HeaderText = "Quantidade";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.produtosDataGridView);
+            this.panel1.Location = new System.Drawing.Point(-3, 260);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(803, 230);
+            this.panel1.TabIndex = 149;
             // 
             // AdmEstoque
             // 
@@ -467,7 +479,7 @@
             this.BackgroundImage = global::AranaStorage.Properties.Resources.AranaPc11;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(799, 486);
-            this.Controls.Add(this.produtosDataGridView);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(label1);
             this.Controls.Add(this.categoriaTextBox);
             this.Controls.Add(this.quantidadeTextBox);
@@ -495,6 +507,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoqueBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtosDataGridView)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -531,9 +544,10 @@
         private System.Windows.Forms.TextBox quantidadeTextBox;
         private System.Windows.Forms.DataGridView produtosDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.Panel panel1;
     }
 }
